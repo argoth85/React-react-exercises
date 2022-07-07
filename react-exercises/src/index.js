@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from 'react-dom';
 import { Hello } from "./Hello";
 
 export class App extends React.Component {
@@ -10,3 +11,12 @@ export class App extends React.Component {
         )
     }
 }
+
+
+const root = ReactDOM.createRoot(document.querySelector('#root'));
+
+root.render(
+  <React.StrictMode>
+    <App/>
+  </React.StrictMode>
+);
