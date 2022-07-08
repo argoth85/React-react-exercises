@@ -2,7 +2,7 @@ import React from "react";
 import { Hello } from "./Hello";
 import { Welcome } from "./Welcome";
 
-const userName = <strong> Vincenzo</strong>;
+const userName = <strong>Vincenzo</strong>;
 
 export class Age extends React.Component {
   render() {
