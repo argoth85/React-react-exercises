@@ -5,19 +5,18 @@ export class Counter extends React.Component {
     count: this.props.initialValue
   };
 
-  constructor(props) {
-    super(props)
-    
-    setInterval(() => {
+// Utilizzando componentDidMount non ho bisogno del costruttore
+// Come mai il counter diventa (+2) invece di (+1)?
+    componentDidMount(){
+      setInterval(() => {
         this.setState((newState) => {
             return {
                 count: newState.count + this.props.incrementBy
             }
         })
     }, this.props.interval);
+  }
     
-}
-
   render() {
     return <CounterDisplay count={this.state.count}/>;
   }
