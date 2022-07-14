@@ -2,7 +2,7 @@ import React from "react";
 import { Hello } from "./Hello";
 import { Welcome } from "./Welcome";
 import {ClickTracker,ClickCounter,Counter} from "./Counter";
-import {InteractiveWelcome} from "./Forms"
+import {InteractiveWelcome, Login} from "./Forms"
 
 
 export class App extends React.Component {
@@ -15,6 +15,7 @@ export class App extends React.Component {
         <ClickCounter />
         <ClickTracker />
         <InteractiveWelcome />
+        <Login />
       </div>
     );
   }
