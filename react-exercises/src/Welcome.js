@@ -1,5 +1,4 @@
 import React from "react";
-import {Age} from "./Age";
 
 
 export class Welcome extends React.Component {
@@ -7,9 +6,6 @@ export class Welcome extends React.Component {
     return (
       <div>
         <p>Welcome, {this.props.name}!</p>
-        {this.props.age > 18
-        ? <Age age={this.props.age}/>
-        : <p><i>You are very young</i></p>}
       </div>
     );
   }

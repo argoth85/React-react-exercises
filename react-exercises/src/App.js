@@ -1,7 +1,8 @@
 import React from "react";
 import { Hello } from "./Hello";
 import { Welcome } from "./Welcome";
-import {ClickTracker,ClickCounter,Counter} from "./Counter"
+import {ClickTracker,ClickCounter,Counter} from "./Counter";
+import {InteractiveWelcome} from "./Forms"
 
 
 export class App extends React.Component {
@@ -9,10 +10,11 @@ export class App extends React.Component {
     return (
       <div>
         <Hello />
-        <Welcome name='John' age={16}/>
+        <Welcome name='John' age={36}/>
         <Counter initialValue={0} incrementBy={1} interval={1000}/>
         <ClickCounter />
         <ClickTracker />
+        <InteractiveWelcome />
       </div>
     );
   }
