@@ -52,3 +52,27 @@ export class ClickCounter extends React.Component {
     );
   }
 }
+
+
+export class ClickTracker extends React.Component {
+
+  state = {
+    button: ''
+  }
+
+  handlerButton = (event) => {
+    this.setState({
+      button: event.currentTarget.name
+    })
+  }
+  render(){
+    return (
+      <div>
+        <button name="first button" onClick={this.handlerButton}>First Button</button>
+        <button name="second button" onClick={this.handlerButton}>Second Button</button>
+        <button name="third button" onClick={this.handlerButton}>Third Button</button>
+        <h1>The last pressed button is the: {this.state.button}</h1>
+      </div>
+    )
+  }
+}
