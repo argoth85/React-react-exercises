@@ -23,10 +23,12 @@ export class InteractiveWelcome extends React.Component {
 }
 
 export class Login extends React.Component {
+
   state = {
     username: "",
     password: "",
-    remember: false
+    remember: false,
+    disabled: true
   };
 
   handleSetChange = (event) => {
@@ -34,6 +36,7 @@ export class Login extends React.Component {
     const name = event.target.name;
     const type = event.target.type;
     const checked = event.target.checked;
+
 
     this.setState({
       [name]: type === 'checkbox' ? checked : value,
@@ -43,6 +46,18 @@ export class Login extends React.Component {
   componentDidUpdate(){
     console.log(this.state)
   }
+
+
+  onLogin = () => {
+    this.setState({
+      username: this.state.username,
+      password: this.state.password
+    })
+  }
+
+
+
+
 
   render() {
     return (
@@ -69,6 +84,8 @@ export class Login extends React.Component {
           checked={this.state.remember}
           onChange={this.handleSetChange}
         ></input>
+        <br/>
+        <button name="login" disabled={!(this.state.username && this.state.password)} onClick={this.onLogin}>Login</button>
       </div>
     );
   }
