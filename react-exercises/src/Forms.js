@@ -55,7 +55,14 @@ export class Login extends React.Component {
     })
   }
 
-
+  handleReset = () => {
+    this.setState({
+      username: '',
+      password:'',
+      remember: false,
+      disabled: true
+    })
+  }
 
 
 
@@ -86,6 +93,7 @@ export class Login extends React.Component {
         ></input>
         <br/>
         <button name="login" disabled={!(this.state.username && this.state.password)} onClick={this.onLogin}>Login</button>
+        <button name="reset" onClick={this.handleReset}>Reset</button>
       </div>
     );
   }
