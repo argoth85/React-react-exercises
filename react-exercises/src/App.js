@@ -3,6 +3,7 @@ import { Hello } from "./Hello";
 import { Welcome } from "./Welcome";
 import {ClickTracker,ClickCounter,Counter} from "./Counter";
 import {InteractiveWelcome, Login} from "./Forms"
+import {UncontrolledLogin} from './UncontrolledLogin'
 
 
 export class App extends React.Component {
@@ -16,6 +17,8 @@ export class App extends React.Component {
         <ClickTracker />
         <InteractiveWelcome />
         <Login />
+        <br/>
+        <UncontrolledLogin />
       </div>
     );
   }
