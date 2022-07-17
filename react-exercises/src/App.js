@@ -1,16 +1,17 @@
 import React from "react";
-import { Hello } from "./Hello";
-import { Welcome } from "./Welcome";
-import {ClickTracker,ClickCounter,Counter} from "./Counter";
-import {InteractiveWelcome, Login} from "./Forms"
-import {UncontrolledLogin} from './UncontrolledLogin'
+// import { Hello } from "./Hello";
+// import { Welcome } from "./Welcome";
+// import {ClickTracker,ClickCounter,Counter} from "./Counter";
+// import {InteractiveWelcome, Login} from "./Forms"
+// import {UncontrolledLogin} from './UncontrolledLogin'
+import { TodoList } from "./TodoList";
 
 
 export class App extends React.Component {
   render() {
     return (
       <div>
-        <Hello />
+        {/* <Hello />
         <Welcome name='John' age={36}/>
         <Counter initialValue={0} incrementBy={1} interval={1000}/>
         <ClickCounter />
@@ -18,7 +19,8 @@ export class App extends React.Component {
         <InteractiveWelcome />
         <Login />
         <br/>
-        <UncontrolledLogin />
+        <UncontrolledLogin /> */}
+        <TodoList />
       </div>
     );
   }
