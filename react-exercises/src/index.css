@@ -1,17 +1,111 @@
 * {
     box-sizing: border-box;
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-    padding:20px;
+    padding: 20px;
+    background-color: #e4ebf6;
+    font-family: sans-serif;
+    color: #5f6875;
 }
 
 .welcome {
     background-color: bisque;
     border: 2px solid black;
-    border-radius:12px;
-    padding:20px;
-    width:40%;
+    border-radius: 12px;
+    padding: 20px;
+    width: 40%;
+}
+
+.container-form {
+    width: 40%;
+    padding: 40px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 100px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+.container-form h1 {
+    margin-bottom: 30px;
+    color: #9ba7ba;
+    font-family: sans-serif;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 0.5px solid #9ba7ba;
+    width: 60%;
+    background-color: #f8f9fd;
+
+}
+
+.bottom-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    align-items: center;
+    width: 60%;
+}
+
+
+.bottom-form-left {
+    display: flex;
+    justify-content: space-between;
+    /* width:50%; */
+
+}
+
+.reset-button {
+    border: none;
+    background-color: none;
+    cursor: pointer;
+    text-decoration: underline #5f6875;
+    ;
+    font-size: 12px;
+    background-color: transparent;
+    color: #5f6875;
+
+
+
+}
+
+.login-button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 60%;
+    margin-top: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.label-checkbox {
+    font-size: 10px;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    /* flex-direction: column; */
+
+}
+
+
+
+.checkbox-style {
+    cursor: pointer;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
 }

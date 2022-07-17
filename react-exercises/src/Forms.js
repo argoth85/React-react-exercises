@@ -23,12 +23,11 @@ export class InteractiveWelcome extends React.Component {
 }
 
 export class Login extends React.Component {
-
   state = {
     username: "",
     password: "",
     remember: false,
-    disabled: true
+    disabled: true,
   };
 
   handleSetChange = (event) => {
@@ -37,64 +36,84 @@ export class Login extends React.Component {
     const type = event.target.type;
     const checked = event.target.checked;
 
-
     this.setState({
-      [name]: type === 'checkbox' ? checked : value,
+      [name]: type === "checkbox" ? checked : value,
     });
   };
 
-  componentDidUpdate(){
-    console.log(this.state)
+  componentDidUpdate() {
+    console.log(this.state);
   }
-
 
   onLogin = () => {
     this.setState({
       username: this.state.username,
-      password: this.state.password
-    })
-  }
+      password: this.state.password,
+    });
+  };
 
   handleReset = () => {
     this.setState({
-      username: '',
-      password:'',
+      username: "",
+      password: "",
       remember: false,
-      disabled: true
-    })
-  }
-
-
+      disabled: true,
+    });
+  };
 
   render() {
+    const loginButtonStyle = {
+      backgroundColor: this.state.password.length < 8 ? "#f6404f" : "#8fe57e",
+    };
+
     return (
-      <div>
-         <h3>Controlled Login</h3>
-        <label>Username</label>
+      <div className="container-form">
+        <h1>Login</h1>
+
         <input
           name="username"
           value={this.state.username}
           onChange={this.handleSetChange}
+          placeholder="Username"
         ></input>
 
-        <label>Password</label>
         <input
           name="password"
           type="password"
           value={this.state.password}
           onChange={this.handleSetChange}
+          placeholder="Password"
         ></input>
 
-        <label>Remember me</label>
-        <input
-          name="remember"
-          type="checkbox"
-          checked={this.state.remember}
-          onChange={this.handleSetChange}
-        ></input>
-        <br/>
-        <button name="login" disabled={!(this.state.username && this.state.password)} onClick={this.onLogin}>Login</button>
-        <button name="reset" onClick={this.handleReset}>Reset</button>
+        <div className="bottom-form">
+          <div className="bottom-form-left">
+            
+            <label className="label-checkbox">Remember me</label>
+            <input className="checkbox-style"
+              name="remember"
+              type="checkbox"
+              checked={this.state.remember}
+              onChange={this.handleSetChange}
+            ></input>
+          </div>
+
+     
+          <button className="reset-button" name="reset" onClick={this.handleReset}>
+            Reset fields
+          </button>
+
+        </div>
+
+
+        <button className="login-button"
+          style={loginButtonStyle}
+          name="login"
+          disabled={!(this.state.username && this.state.password)}
+          onClick={this.onLogin}
+        >
+          Login
+        </button>
+        
       </div>
     );
   }
