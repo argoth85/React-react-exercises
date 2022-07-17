@@ -35,7 +35,11 @@ export class TodoList extends React.Component {
         return (
             <div>
                 <ul>
-                    {this.state.items.map((item, index) => <li key={item + index}>{item}</li>)}
+                    {this.state.items.map((item, index) =><li key={item + index}>{item}
+                    <button onClick={() => {this.state.items.splice(index, 1);
+                    this.setState({ 
+                            items: this.state.items });}}>Remove Item</button>
+                    </li>)}
                 </ul>
                 <input type="text" name="username" placeholder="Insert a name" onChange={this.handlerInputChange} value={this.state.inputValue}></input>
                 <button onClick={this.handlerAdd} disabled={!this.state.inputValue}>Add!</button>
