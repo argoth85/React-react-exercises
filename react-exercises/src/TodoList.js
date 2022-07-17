@@ -13,8 +13,7 @@ export class TodoList extends React.Component {
 
     handlerAdd = () => {
         this.setState({
-        items: [...this.state.items, this.state.inputValue],
-        inputValue: '',
+        items: [...this.state.items, this.state.inputValue]
     });
     }
     
