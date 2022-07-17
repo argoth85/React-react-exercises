@@ -24,6 +24,11 @@ export class TodoList extends React.Component {
         });
     }
 
+    resetItems = () => {
+        this.setState ({
+            items: []
+        })
+    }
 
 
     render() {
@@ -34,6 +39,7 @@ export class TodoList extends React.Component {
                 </ul>
                 <input type="text" name="username" placeholder="Insert a name" onChange={this.handlerInputChange} value={this.state.inputValue}></input>
                 <button onClick={this.handlerAdd} disabled={!this.state.inputValue}>Add!</button>
+                <button onClick={this.resetItems}>Reset</button>
             </div>
         )
     }
