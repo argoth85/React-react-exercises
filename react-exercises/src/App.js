@@ -12,7 +12,7 @@ import {Container} from "./Container"
 export class App extends React.Component {
   render() {
     return (
-        <Container>
+        <Container title="This is a Title">
         <Hello />
         <Welcome name='John' age={36}/>
         <Counter initialValue={0} incrementBy={1} interval={1000}/>
