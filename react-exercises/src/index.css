@@ -109,3 +109,12 @@ input {
     justify-content: center;
     margin: 0;
 }
+
+
+.container {
+    background-color: white;
+    border: 1px solid red;
+    width:60%;
+    margin:0 auto;
+    padding:20px;
+}
