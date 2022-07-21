@@ -16,7 +16,7 @@ export class App extends React.Component {
   render() {
     return (
         <Container>
-         <Sum numbers = {[3,6,12,56,78,90]}/>
+         <Sum />
         </Container>
     );
   }
