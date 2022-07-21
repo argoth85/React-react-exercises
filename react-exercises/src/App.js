@@ -1,6 +1,7 @@
 import React from "react";
+import { ClickCounterFunction } from "./ClickCounterFunction";
 import { Container } from "./Container";
-import {Sum} from "./Sum"
+
 
 export class App extends React.Component {
   state = {
@@ -16,7 +17,7 @@ export class App extends React.Component {
   render() {
     return (
         <Container>
-         <Sum />
+         <ClickCounterFunction/>
         </Container>
     );
   }
