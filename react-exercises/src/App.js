@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "./Container";
-import {Welcome} from "./Welcome"
+import {Sum} from "./Sum"
 
 export class App extends React.Component {
   state = {
@@ -16,7 +16,7 @@ export class App extends React.Component {
   render() {
     return (
         <Container>
-          <Welcome name = 'Vincenzo'/>
+         <Sum />
         </Container>
     );
   }
